@@ -1,0 +1,5 @@
+This is a library for working with data on the bit-level. The interface
+looks pretty much like a ByteString, which is exactly what it is underneath.
+This library also provides an alternative implementation of the BitGet
+monad, as found in Data.Binary.Strict. However, this one is lazy, as is the
+library in whole.

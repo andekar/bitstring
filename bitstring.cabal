@@ -1,0 +1,30 @@
+Name:            bitstring
+Version:         0.0.1
+Synopsis:        Library for working with binary data on bit-level
+Description:
+    This is a library for working with data on the bit-level. The interface
+    looks pretty much like a ByteString, which is exactly what it is underneath.
+    This library also provides an alternative implementation of the BitGet
+    monad, as found in Data.Binary.Strict. However, this one is lazy, as is the
+    library in whole.
+
+Copyright:       Tobias Olausson, Anders Karlsson
+Author:          Tobias Olausson, Anders Karlsson
+Maintainer:      olaussot@student.chalmers.se andekar@student.chalmers.se
+Homepage:        http://code.haskell.org/HQmpd
+License:         BSD3
+License-file:    LICENSE
+
+Category:        Codec
+Stability:       experimental
+Build-type:      Simple
+Cabal-version:   >= 1.2
+
+Library
+  Build-depends:   base, bytestring, mtl, QuickCheck >= 2.1.0.1
+  Exposed-modules: Data.Binary.BitString.BitString
+                   Data.Binary.BitString.BitGet
+  Other-modules:   Data.Binary.BitString.Tests
+                   
+  hs-source-dirs:  .
+  ghc-options:     -O2

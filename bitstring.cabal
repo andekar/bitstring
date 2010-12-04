@@ -21,7 +21,7 @@ Build-type:      Simple
 Cabal-version:   >= 1.2
 
 Library
-  Build-depends:   base, bytestring, mtl, QuickCheck >= 2.1.0.1
+  Build-depends:   base >= 4, bytestring, mtl, QuickCheck >= 2.1.0.1
   Exposed-modules: Data.Binary.BitString.BitString
                    Data.Binary.BitString.BitGet
   Other-modules:   Data.Binary.BitString.Tests

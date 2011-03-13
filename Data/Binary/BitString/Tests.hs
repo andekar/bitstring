@@ -14,12 +14,6 @@ import qualified Data.ByteString.Lazy.Internal as LI
 import Test.QuickCheck
 import Data.Bits
 
-instance Arbitrary Word8 where
-    arbitrary = do 
-        i <- choose (0,255) :: Gen Int
-        return $ fromIntegral i
-    shrink i = map fromInteger $ shrink (toInteger i)
-
 instance Arbitrary BitString where
     arbitrary = sized $ \n -> choose (0,n) >>= myArbitrary where 
         myArbitrary :: Int -> Gen BitString
